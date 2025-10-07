@@ -7,6 +7,7 @@ const userRoutes = require("./routes/userroutes");
 const purchaseRoutes = require("./routes/purchaseroutes");
 const transferRoutes = require("./routes/transferroutes");
 const assignRoutes = require("./routes/assignroutes");
+const expendRoutes = require("./routes/expandedroutes");
 const app = express();
 
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use("/api/admin/users",userRoutes);
 app.use("/api/purchase", purchaseRoutes);
 app.use("/api/transfer", transferRoutes);
 app.use("/api/assign", assignRoutes);
+app.use("/api/expended", expendRoutes);
 
 
 const PORT = process.env.PORT  || 5000;
